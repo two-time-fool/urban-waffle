@@ -1,4 +1,4 @@
-import { FETCH_SUPERHERO } from '../actions/marvel';
+import { FETCH_SUPERHEROES } from '../actions/marvel';
 
 const initialState = {
   superheroes: []
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
-    case FETCH_SUPERHERO:
+    case FETCH_SUPERHEROES:
       return {
         ...state,
         superheroes: action.payload

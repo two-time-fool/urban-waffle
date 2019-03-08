@@ -1,9 +1,9 @@
-import { marvelApi } from 'marvel-comics-api';
+import { url } from './apiKey';
+
+console.log(url);
 
 export const getSuperheroes = () => {
-  return marvelApi(fetch('https://gateway.marvel.com/v1/public/characters?name=black%20widow'))
+  return fetch(url)
     .then(res => res.json())
-    .then(res => {
-      console.log(res);
-    });
+    .then(res => res.data.results);
 };
