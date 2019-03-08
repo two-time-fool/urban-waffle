@@ -27,7 +27,7 @@ class AllSuperheroes extends PureComponent {
 
   render() {
     return (
-      <Superheroes superheroes={this.props.superheroes} onClick={this.props.onClick} />
+      <Superheroes superheroes={this.props.superheroes} onClick={this.props.onClick.bind(null, this.props.offset)} />
     );
   }
 }
@@ -42,14 +42,13 @@ const mapDispatchToProps = (dispatch, props) => ({
     console.log('fetch dispatch', props);
     dispatch(fetchSuperheroes(props.offset));
   },
-  onClick({ target }) {
-    console.log('offset', props);
+  onClick(offset, { target }) {
     const factoryMethod = {
       increase: increaseOffset,
       decrease: decreaseOffset
     };
-    dispatch(factoryMethod[target.name](target.value));
-    dispatch(fetchSuperheroes(props.offset));
+    dispatch(factoryMethod[target.name](offset));
+    dispatch(fetchSuperheroes(offset));
   }
 });
 
