@@ -5,4 +5,4 @@ const privateKey = '97ae26edfe22c11af5b51cd79bd0be628504ff37';
 const message = ts + privateKey + publicKey;
 const hash = md5(message);
 
-export const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+export const url = `https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=50`;

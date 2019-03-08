@@ -1,7 +1,5 @@
 import { url } from './apiKey';
 
-console.log(url);
-
 export const getSuperheroes = () => {
   return fetch(url)
     .then(res => res.json())
