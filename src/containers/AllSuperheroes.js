@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { getSuperheroes, getOffset } from '../selectors/superheroes';
 import { fetchSuperheroes, increaseOffset, decreaseOffset } from '../actions/marvel';
 import Superheroes from '../components/Superheroes';
-
 class AllSuperheroes extends PureComponent {
   static propTypes = {
     superheroes: PropTypes.array.isRequired,
@@ -14,14 +13,12 @@ class AllSuperheroes extends PureComponent {
   };
 
   componentDidMount() {
-    this.props.fetch();
+    this.props.fetch(this.props.offset);
   }
   
   componentDidUpdate(prevProps) {
-    console.log('PREVPROPS', prevProps.offset);
-    console.log('Current PROPS', this.props.offset);
     if(prevProps.offset !== this.props.offset) {
-      return this.props.fetch();
+      return this.props.fetch(this.props.offset);
     }
   }
 
@@ -37,10 +34,9 @@ const mapStateToProps = state => ({
   offset: getOffset(state)
 });
 
-const mapDispatchToProps = (dispatch, props) => ({
-  fetch() {
-    console.log('fetch dispatch', props);
-    dispatch(fetchSuperheroes(props.offset));
+const mapDispatchToProps = dispatch => ({
+  fetch(offset) {
+    dispatch(fetchSuperheroes(offset));
   },
   onClick(offset, { target }) {
     const factoryMethod = {
@@ -48,7 +44,6 @@ const mapDispatchToProps = (dispatch, props) => ({
       decrease: decreaseOffset
     };
     dispatch(factoryMethod[target.name](offset));
-    dispatch(fetchSuperheroes(offset));
   }
 });
 
