@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Superhero from './Superhero';
 
 function Superheroes({ superheroes, onClick }) {
   const superheroesList = superheroes.map((superhero, i) => {
     return (
-      <li key={i}>{superhero.name}</li>
+      <Superhero key={i} superhero={superhero} />
     );
   });
   return (
