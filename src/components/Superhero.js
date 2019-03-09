@@ -6,7 +6,7 @@ export default function Superhero({ superhero }) {
   const image = imagePath[0] + 's:' + imagePath[1] + '.' + superhero.thumbnail.extension;
   return (
     <li>
-      <img src={image} />
+      <img src={image} style={{ width: '200px' }}/>
       {superhero.name}
     </li>
   );

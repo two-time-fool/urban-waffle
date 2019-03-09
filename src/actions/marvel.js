@@ -1,4 +1,4 @@
-import { getSuperheroes } from '../services/marvelApi';
+import { getSuperheroes, getFilteredSuperheroes } from '../services/marvelApi';
 
 export const FETCH_SUPERHEROES = 'FETCH_SUPERHEROES';
 export const LOAD_SUPERHEROES_START = 'LOAD_SUPERHEROES_START';
@@ -21,4 +21,10 @@ export const increaseOffset = offset => ({
 export const decreaseOffset = offset => ({
   type: DECREASE_OFFSET,
   payload: Number.parseInt(offset - 20)
+});
+
+export const UPDATE_SUPERHEROES = 'UPDATE_SUPERHEROES';
+export const updateSuperheroes = searchTerm => ({
+  type: UPDATE_SUPERHEROES,
+  payload: getFilteredSuperheroes(searchTerm)
 });

@@ -1,8 +1,14 @@
-import { FETCH_SUPERHEROES, INCREASE_OFFSET, DECREASE_OFFSET } from '../actions/marvel';
+import { 
+  FETCH_SUPERHEROES, 
+  INCREASE_OFFSET, 
+  DECREASE_OFFSET, 
+  UPDATE_SUPERHEROES
+} from '../actions/marvel';
 
 const initialState = {
   superheroes: [],
-  offset: 0
+  offset: 0,
+  searchTerm: ''
 };
 
 export default function reducer(state = initialState, action) {
@@ -18,6 +24,11 @@ export default function reducer(state = initialState, action) {
         offset: action.payload
       };
     case FETCH_SUPERHEROES:
+      return {
+        ...state,
+        superheroes: action.payload
+      };
+    case UPDATE_SUPERHEROES:
       return {
         ...state,
         superheroes: action.payload

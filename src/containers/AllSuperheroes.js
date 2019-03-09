@@ -1,15 +1,17 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getSuperheroes, getOffset } from '../selectors/superheroes';
-import { fetchSuperheroes, increaseOffset, decreaseOffset } from '../actions/marvel';
+import { getOffset, getSuperheroes } from '../selectors/superheroes';
+import { fetchSuperheroes, increaseOffset, decreaseOffset, updateSuperheroes } from '../actions/marvel';
 import Superheroes from '../components/Superheroes';
 class AllSuperheroes extends PureComponent {
   static propTypes = {
     superheroes: PropTypes.array.isRequired,
     offset: PropTypes.number.isRequired,
     fetch: PropTypes.func.isRequired,
-    onClick: PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired,
+    searchTerm: PropTypes.string,
+    onChange: PropTypes.func.isRequired
   };
 
   componentDidMount() {
@@ -24,7 +26,12 @@ class AllSuperheroes extends PureComponent {
 
   render() {
     return (
-      <Superheroes superheroes={this.props.superheroes} onClick={this.props.onClick.bind(null, this.props.offset)} />
+      <Superheroes 
+        superheroes={this.props.superheroes} 
+        onClick={this.props.onClick.bind(null, this.props.offset)}
+        searchTerm={this.props.searchTerm}
+        onChange={this.props.onChange} 
+      />
     );
   }
 }
@@ -44,6 +51,9 @@ const mapDispatchToProps = dispatch => ({
       decrease: decreaseOffset
     };
     dispatch(factoryMethod[target.name](offset));
+  },
+  onChange({ target }) {
+    dispatch(updateSuperheroes(target.value));
   }
 });
 
