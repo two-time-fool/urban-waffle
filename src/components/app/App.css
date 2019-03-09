@@ -1,0 +1,60 @@
+* {
+  .button {
+    margin: 20px 10px;
+    width: 50px;
+  }
+  .input {
+    font-family: 'teko';
+    margin: 20px 10px;
+    width: 200px;
+    padding: 3px;
+    font-size: 1.6em;
+  }
+  .container {
+    width: 100%;
+    background: black;
+    align-items: center;
+    img {
+      width: 500px;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    list-style-type: none;
+    padding: 0;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    li {
+      list-style-type: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 10px 10px;
+      .name {
+        position: absolute;
+        top: 10px;
+        color: white;
+        z-index: 1;
+        font-family: 'teko';
+        font-size: 2.5em;
+      }
+      img {
+        box-shadow: 4px 4px 4px black;
+        object-fit: cover;
+        object-position: top;
+        z-index: -1;
+        height: 500px;
+        width: 325px;
+      }
+      img:hover {
+        box-shadow: 2px 2px red;
+        
+      }
+    }
+  }
+};
