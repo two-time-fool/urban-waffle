@@ -1,4 +1,8 @@
-export const getSuperheroes = state => state.marvel.superheroes;
+export const getSuperheroes = state => {
+  return state.marvel.superheroes.filter(superhero => {
+    return !superhero.thumbnail.path.includes('image_not_available');
+  });
+};
 export const getOffset = state => state.marvel.offset;
 
 export const getSearchTerm = state => state.marvel.searchTerm;
