@@ -7,16 +7,22 @@
     .button {
       background: rgba(0,0,0,0);
       font-size: 4em;
-      border: none;
       color: red;
+      cursor: pointer;
+      padding: 0;
+      height: 10px;
+      border: none;
     } 
-  }
-  .input {
-    font-family: 'teko';
-    margin: 20px auto;
-    width: 220px;
-    padding: 4px;
-    font-size: 1.8em;
+    .button:hover {
+      text-shadow: 2px 2px 2px black;
+    }
+    .input {
+      font-family: 'teko';
+      margin: 20px auto;
+      width: 220px;
+      padding: 4px;
+      font-size: 1.8em;
+    }
   }
   .container {
     width: 100vw;
