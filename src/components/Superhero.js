@@ -8,7 +8,9 @@ export default function Superhero({ superhero }) {
   return (
     <li>
       <img src={image} />
-      <p className={styles.name}>{superhero.name}</p>
+      <div className={styles.nameWrapper}>
+        <p className={styles.name}>{superhero.name}</p>
+      </div>
     </li>
   );
 }

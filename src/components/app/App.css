@@ -15,33 +15,34 @@
     background: black;
     align-items: center;
     img {
-      width: 500px;
+      width: 800px;
       display: block;
       margin: 0 auto;
     }
   }
   ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     list-style-type: none;
-    padding: 0;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    margin-left: -10px;
     li {
-      list-style-type: none;
+      margin: 15px 15px;
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      margin: 10px 10px;
       .name {
         position: absolute;
-        top: 10px;
+        top: -40px;
+        background: rgba(255, 255, 255, 0.5);
+        padding: 10px 0;
+        width: 100%;
         color: white;
+        text-shadow: 2px 2px black;
         z-index: 1;
         font-family: 'teko';
         font-size: 2.5em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       img {
         box-shadow: 4px 4px 4px black;
