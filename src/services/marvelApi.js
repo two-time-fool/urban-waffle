@@ -6,7 +6,7 @@ const message = ts + privateKey + publicKey;
 const hash = md5(message);
 
 export const getSuperheroes = (offset) => {
-  return fetch(`https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=20&offset=${offset}`)
+  return fetch(`https://gateway.marvel.com/v1/public/characters?ts=${ts}&apikey=${publicKey}&hash=${hash}&limit=100&offset=${offset}`)
     .then(res => res.json())
     .then(res => res.data.results);
 };

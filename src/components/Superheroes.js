@@ -11,9 +11,11 @@ function Superheroes({ superheroes, onClick, searchTerm, onChange }) {
   });
   return (
     <>
-      <input type="text" name="searchTerm" value={searchTerm} onChange={onChange} className={styles.input} /><br />
-      <button name='decrease' onClick={onClick} className={styles.button}>←</button>
-      <button name='increase' onClick={onClick} className={styles.button}>→</button>
+      <div className={styles.search}>
+        <button name='decrease' onClick={onClick} className={styles.button}>￩</button>
+        <input type="text" name="searchTerm" value={searchTerm} onChange={onChange} className={styles.input} /><br />
+        <button name='increase' onClick={onClick} className={styles.button}>￫</button>
+      </div>
       <ul>
         {superheroesList}
       </ul>

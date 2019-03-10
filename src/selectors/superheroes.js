@@ -1,6 +1,6 @@
 export const getSuperheroes = state => {
   return state.marvel.superheroes.filter(superhero => {
-    return !superhero.thumbnail.path.includes('image_not_available');
+    return !superhero.thumbnail.path.includes('image_not_available') && !superhero.thumbnail.extension.includes('gif');
   });
 };
 export const getOffset = state => state.marvel.offset;

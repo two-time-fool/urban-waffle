@@ -15,12 +15,12 @@ export const DECREASE_OFFSET = 'DECREASE_OFFSET';
 
 export const increaseOffset = offset => ({
   type: INCREASE_OFFSET,
-  payload: Number.parseInt(offset + 20)
+  payload: Number.parseInt(offset + 100)
 });
 
 export const decreaseOffset = offset => ({
   type: DECREASE_OFFSET,
-  payload: Number.parseInt(offset - 20)
+  payload: Number.parseInt(offset - 100)
 });
 
 export const UPDATE_SUPERHEROES = 'UPDATE_SUPERHEROES';
