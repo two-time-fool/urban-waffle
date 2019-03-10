@@ -13,15 +13,14 @@ function Superheroes({ superheroes, onClick, searchTerm, onChange }) {
   return (
     <>
       <div className={styles.search}>
-        <button name='decrease' onClick={onClick} className={styles.button}>❮</button>
+        <button name='decrease' onClick={onClick} className={styles.button1}>❮</button>
         <div className={styles.wrap}>
           <div className={styles.searchContainer}>
             <input type="text" name="searchTerm" value={searchTerm} onChange={onChange} className={styles.input} /><br />
             <button type='submit' className={styles.searchButton}><FontAwesomeIcon icon='search' /></button>
           </div>
         </div>
-       
-        <button name='increase' onClick={onClick} className={styles.button}>❯</button>
+        <button name='increase' onClick={onClick} className={styles.button2}>❯</button>
       </div>
       <ul>
         {superheroesList}

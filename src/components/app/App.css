@@ -7,16 +7,31 @@
       width: 100%;
       position: relative;
     }
-    .button {
+    .button1 {
       background: rgba(0,0,0,0);
-      font-size: 2em;
+      font-size: 3em;
       color: red;
       cursor: pointer;
       padding: 0;
       border: none;
+      text-shadow: -2px 2px 2px black;
+
     } 
-    .button:hover {
+    .button1:hover {
+      text-shadow: -4px 4px 4px black;
+    }
+    .button2 {
+      background: rgba(0,0,0,0);
+      font-size: 3em;
+      color: red;
+      cursor: pointer;
+      padding: 0;
+      border: none;
       text-shadow: 2px 2px 2px black;
+
+    } 
+    .button2:hover {
+      text-shadow: 4px 4px 4px black;
     }
     .input {
       font-family: 'teko';
