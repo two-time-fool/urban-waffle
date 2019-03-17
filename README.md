@@ -1,6 +1,6 @@
 # Marvel Super Search
 
-**Authors** [Paige Gorry](https://github.com/paigeegorry), [Kristin Hortsch](https://github.com/kristinhortsch)
+**Authors:** [Paige Gorry](https://github.com/paigeegorry), [Kristin Hortsch](https://github.com/kristinhortsch)
 
 ## Overview
 An interactive search for your favorite Marvel Superheroes!
