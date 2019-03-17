@@ -4,7 +4,7 @@ import styles from './App.css';
 export default function Header() {
   return (
     <div className={styles.container}>
-      <img src='../../../marvelbackground.jpg' />
+      <img src='src/assets/marvelbackground.jpg' />
     </div>
   );
 }
