@@ -2,21 +2,66 @@
   .search {
     display: flex;
     justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 30px;
-    .button {
+    margin: 20px 30px 0 30px;
+    .searchContainer {
+      width: 100%;
+      position: relative;
+    }
+    .button1 {
       background: rgba(0,0,0,0);
-      font-size: 4em;
-      border: none;
+      font-size: 3em;
       color: red;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      text-shadow: -2px 2px 2px black;
+
     } 
-  }
-  .input {
-    font-family: 'teko';
-    margin: 20px auto;
-    width: 220px;
-    padding: 4px;
-    font-size: 1.8em;
+    .button1:hover {
+      text-shadow: -4px 4px 4px black;
+    }
+    .button2 {
+      background: rgba(0,0,0,0);
+      font-size: 3em;
+      color: red;
+      cursor: pointer;
+      padding: 0;
+      border: none;
+      text-shadow: 2px 2px 2px black;
+
+    } 
+    .button2:hover {
+      text-shadow: 4px 4px 4px black;
+    }
+    .input {
+      font-family: 'teko';
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 1.8em;
+      float: left;
+      width: 100%;
+      border: 3px solid black;
+      height: 19px;
+      border-radius: 5px;
+      outline: none;
+      :focus {
+        color: #00B4CC;
+      }
+    }
+    .searchButton {
+      position: absolute;
+      top: 20px;  
+      right: -25px;
+      width: 45px;
+      height: 45px;
+      border: 1px solid black;
+      background: black;
+      text-align: center;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 20px;
+    }
   }
   .container {
     width: 100vw;
@@ -42,21 +87,21 @@
         text-align: center;
         top: -40px;
         background: rgba(255, 255, 255, 0.55);
-        padding: 10px 0 5px 0;
+        padding: 15px 0 0 0;
         width: 100%;
         color: black;
         text-shadow: 1px 1px white;
         z-index: 1;
         font-family: 'teko';
-        font-size: 2.5em;
+        font-size: 2em;
       }
       img {
         box-shadow: 4px 4px 4px black;
         object-fit: cover;
         object-position: top;
         z-index: -1;
-        height: 300px;
-        width: 220px;
+        height: 350px;
+        width: 240px;
       }
       img:hover {
         box-shadow: 2px 2px red;
